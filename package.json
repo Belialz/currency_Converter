@@ -1,0 +1,11 @@
+{
+  "name": "price_convector",
+  "version": "1.0.0",
+  "description": "Convert price into zl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilya Murashka",
+  "license": "ISC"
+}

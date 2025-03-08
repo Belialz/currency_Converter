@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Currency Converter to PLN",
+  "version": "1.0",
+  "description": "Convert selected prices to another currency",
+  "permissions": ["contextMenus", "storage", "notifications", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://api.frankfurter.app/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icons/6594315.png",
+      "48": "./icons/6594315.png",
+      "128": "./icons/6594315.png"
+    }
+  }
+}
