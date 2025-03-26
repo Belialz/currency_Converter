@@ -3,10 +3,16 @@
   "name": "Currency Converter to PLN",
   "version": "1.0",
   "description": "Convert selected prices to another currency",
-  "permissions": ["contextMenus", "storage", "notifications", "activeTab"],
+  "permissions": ["contextMenus", "storage", "notifications", "activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "host_permissions": ["https://api.frankfurter.app/*"],
   "action": {
     "default_popup": "popup.html",
