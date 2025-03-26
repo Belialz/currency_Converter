@@ -3,7 +3,7 @@
   "name": "Currency Converter to PLN",
   "version": "1.0",
   "description": "Convert selected prices to another currency",
-  "permissions": ["contextMenus", "storage", "notifications", "activeTab", "scripting"],
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
