@@ -17,18 +17,16 @@ chrome.storage.local.get({
   const currencyData = result.data;
 
   if (currencyData) {
-    // Получаем элемент select
     const selectElement = document.querySelectorAll(".select-wrapper select");
     selectElement.forEach((el) => {
       el.innerHTML = "";
 
-      // Проходим по объекту валют и создаем опции для select
       Object.entries(currencyData).forEach(([code, name]) => {
         const option = document.createElement("option");
-        option.value = code; // Значение будет код валюты (например, USD)
-        option.textContent = `${code} - ${name}`; // Текст отображаемый в опции (например, USD - United States Dollar)
+        option.value = code;
+        option.textContent = `${code}`;
+        option.title = name
 
-        // Добавляем опцию в select
         el.appendChild(option);
       });
     });
@@ -46,14 +44,14 @@ function showCustomAlert(message, duration) {
   const alert = document.createElement("div");
   alert.textContent = message;
   alert.style.position = "fixed";
-  alert.style.bottom = "20px";
+  alert.style.bottom = "15px";
   alert.style.left = "50%";
   alert.style.transform = "translateX(-50%)";
   alert.style.backgroundColor = "#4CAF50"; // Зеленый фон
   alert.style.color = "white";
-  alert.style.padding = "10px 20px";
+  alert.style.padding = "10px 15px";
   alert.style.borderRadius = "5px";
-  alert.style.fontSize = "14px";
+  alert.style.fontSize = "12px";
   alert.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
   alert.style.zIndex = "9999";
   alert.style.opacity = "0";
